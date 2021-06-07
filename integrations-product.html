@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link href="./assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./assets/css/integrations-product.css" /> -->
+  </head>
+  <body class="pricing">
+    <header id="header">
+      <div class="container px-4">
+        <nav class="d-flex align-items-center">
+          <a href="/" style="margin-right: 2rem">
+            <img
+              class="logo"
+              src="./assets/images/placeholder_logo.png"
+              alt=""
+            />
+          </a>
+          <ul class="m-0 mr-auto d-none d-lg-flex list-unstyled">
+            <li>
+              <a class="mr-4 navlink" href="/videofunnels.html"
+                >Video Funnels</a
+              >
+            </li>
+            <li class="mr-4 dropdown">
+              <button
+                class="btn p-0 navlink dropdown-toggle"
+                type="button"
+                id="navDropdownProduct"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Product
+              </button>
+              <ul
+                class="dropdown-menu border-0 shadow"
+                aria-labelledby="navDropdownProduct"
+              >
+                <li class="dropdown-item p-0">
+                  <a class="navlink px-3 py-2 d-block" href="/features.html"
+                    >All features</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a class="navlink px-3 py-2 d-block" href="/integrations.html"
+                    >Integrations</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a
+                    class="navlink px-3 py-2 d-block"
+                    href="/screen-recorder.html"
+                    >Chrome Extension</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mr-4 dropdown">
+              <button
+                class="btn p-0 navlink dropdown-toggle"
+                type="button"
+                id="navDropdownBonjoroFor"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Bonjoro for
+              </button>
+              <ul
+                class="dropdown-menu border-0 shadow"
+                aria-labelledby="navDropdownBonjoroFor"
+              >
+                <li class="dropdown-item p-0">
+                  <a class="navlink px-3 py-2 d-block" href="/teams-saas.html"
+                    >SaaS</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a
+                    class="navlink px-3 py-2 d-block"
+                    href="/teams-marketing.html"
+                    >Marketing</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a
+                    class="navlink px-3 py-2 d-block"
+                    href="/teams-customer-success.html"
+                    >Customer Success</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a class="navlink px-3 py-2 d-block" href="/teams-sales.html"
+                    >Sales</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a
+                    class="navlink px-3 py-2 d-block"
+                    href="/teams-ecommerce.html"
+                    >eCommerce</a
+                  >
+                </li>
+                <li class="dropdown-item p-0">
+                  <a
+                    class="navlink px-3 py-2 d-block"
+                    href="/teams-education.html"
+                    >Online Education</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mr-4"><a class="navlink" href="/blog.html">Blog</a></li>
+            <li><a class="navlink" href="/pricing.html">Pricing</a></li>
+          </ul>
+          <a
+            class="ml-auto mr-4 navlink d-none d-lg-block"
+            href="/auth-login.html"
+            >Login</a
+          >
+          <a
+            class="cta btn btn-primary d-none d-lg-block b-7"
+            href="/auth-register.html"
+            >Start free trial</a
+          >
+          <button
+            id="mobile-nav-menu-button"
+            class="btn d-flex d-lg-none ml-auto px-0 align-items-center justify-content-center"
+          >
+            <span class="m-0 p-0 material-icons-outlined">menu</span>
+          </button>
+        </nav>
+        <!--  -->
+        <div id="mobile-nav-menu">
+          <ul class="m-0 mr-auto list-unstyled">
+            <li>
+              <a class="mt-4 navlink" href="/videofunnels.html"
+                >Video Funnels</a
+              >
+            </li>
+            <li class="mt-3">
+              <button
+                id="mobile-nav-menu-product-button"
+                class="btn btn-block p-0 navlink d-flex px-3 py-3"
+              >
+                Product
+              </button>
+              <ul
+                id="mobile-nav-menu-product-dropdown"
+                class="list-unstyled mobile-nav-menu-dropdown"
+              >
+                <li class="pb-2">
+                  <a class="navlink px-3 p-0 d-block" href="/features.html"
+                    >All features</a
+                  >
+                </li>
+                <li class="py-2">
+                  <a class="navlink px-3 p-0 d-block" href="/integrations.html"
+                    >Integrations</a
+                  >
+                </li>
+                <li class="py-2 pb-3">
+                  <a
+                    class="navlink px-3 p-0 d-block"
+                    href="/screen-recorder.html"
+                    >Chrome Extension</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mt-3">
+              <button
+                id="mobile-nav-menu-bonjoro-for-button"
+                class="btn btn-block p-0 navlink d-flex px-3 py-3"
+              >
+                Bonjoro for
+              </button>
+              <ul
+                id="mobile-nav-menu-bonjoro-for-dropdown"
+                class="list-unstyled mobile-nav-menu-dropdown"
+              >
+                <li class="pb-2">
+                  <a class="navlink px-3 p-0 d-block" href="/teams-saas.html"
+                    >SaaS</a
+                  >
+                </li>
+                <li class="py-2">
+                  <a
+                    class="navlink px-3 p-0 d-block"
+                    href="/teams-marketing.html"
+                    >Marketing</a
+                  >
+                </li>
+                <li class="py-2 pb-3">
+                  <a
+                    class="navlink px-3 p-0 d-block"
+                    href="/teams-customer-success.html"
+                    >Customer Success</a
+                  >
+                </li>
+                <li class="py-2 pb-3">
+                  <a class="navlink px-3 p-0 d-block" href="/teams-sales.html"
+                    >Sales</a
+                  >
+                </li>
+                <li class="py-2 pb-3">
+                  <a
+                    class="navlink px-3 p-0 d-block"
+                    href="/teams-ecommerce.html"
+                    >eCommerce</a
+                  >
+                </li>
+                <li class="py-2 pb-3">
+                  <a
+                    class="navlink px-3 p-0 d-block"
+                    href="/teams-education.html"
+                    >Online Education</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mt-3"><a class="navlink" href="/blog.html">Blog</a></li>
+            <li class="mt-3">
+              <a class="navlink" href="/pricing.html">Pricing</a>
+            </li>
+            <li class="mt-3">
+              <a class="ml-auto navlink" href="/auth-login.html">Login</a>
+            </li>
+            <li class="mt-3">
+              <a
+                class="cta btn btn-block btn-primary p-0 d-flex px-3 py-3 b-7"
+                href="/auth-register.html"
+                >Start free trial</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!--  -->
+    <section class="mb-5 px-4 pt-5 container">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h1>asdf</h1>
+        </div>
+        <div class="col-12 col-md-6">
+          <div>
+            <p>asdf</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <footer id="footer" class="bg-primary-light">
+      <div class="container px-4">
+        <div class="footer-grid">
+          <div class="product-links">
+            <h3 class="mb-3">Product</h3>
+            <ul class="m-0 list-unstyled">
+              <li class="mb-2"><a href="/features.html">All features</a></li>
+              <li class="mb-2"><a href="/integrations.html">Integrations</a></li>
+              <li class="mb-2"><a href="/screen-recorder.html">Chrome Extension</a></li>
+              <li class="mb-2"><a href="/pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+          <div class="company-links">
+            <h3 class="mb-3">Bonjoro for</h3>
+            <ul class="m-0 list-unstyled">
+              <li class="mb-2"><a href="/teams-saas.html">SaaS</a></li>
+              <li class="mb-2"><a href="/teams-marketing.html">Marketing</a></li>
+              <li class="mb-2">
+                <a href="/teams-customer-success.html">Customer Success</a>
+              </li>
+              <li class="mb-2"><a href="/teams-sales.html">Sales</a></li>
+              <li class="mb-2"><a href="/teams-ecommerce.html">eCommerce</a></li>
+              <li class="mb-2"><a href="/teams-education.html">Online Education</a></li>
+            </ul>
+          </div>
+          <div class="learn-links">
+            <h3 class="mb-3">Learn</h3>
+            <ul class="m-0 list-unstyled">
+              <li class="mb-2"><a href="/videofunnels.html">Video funnels</a></li>
+              <li class="mb-2"><a href="/blog.html">Blog</a></li>
+              <li class="mb-2"><a href="/about.html">About us</a></li>
+            </ul>
+          </div>
+          <div class="support-links">
+            <h3 class="mb-3">Support</h3>
+            <ul class="m-0 list-unstyled">
+              <li class="mb-2"><a href="">Contact</a></li>
+              <li class="mb-2"><a href="/help">Help docs</a></li>
+              <li class="mb-2"><a href="/terms-and-conditions">Terms</a></li>
+              <li class="mb-2"><a href="/privacy-policy">Privacy</a></li>
+            </ul>
+          </div>
+          <div class="general-links">
+            <a href="/" class="d-block mb-3"
+              ><img
+                class="logo"
+                src="./assets/images/placeholder_logo.png"
+                alt=""
+            /></a>
+            <p class="mb-4">Send Fast Personal Videos and get results</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/">
+                <i class="fab fa-facebook-square mr-2"></i>
+              </a>
+              <a href="https://www.youtube.com/">
+                <i class="fab fa-youtube mr-2"></i>
+              </a>
+              <a href="https://au.linkedin.com/">
+                <i class="fab fa-linkedin mr-2"></i>
+              </a>
+              <a href="https://www.instagram.com/">
+                <i class="fab fa-instagram-square mr-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="fab fab-chat rounded-circle btn">
+      <span class="material-icons">chat_bubble</span>
+    </button>
+
+    <svg viewBox="0 0 100 100" hidden>
+      <defs>
+        <path
+          id="svg-check-mark"
+          d="M15 55 L40 80 L85 25"
+          fill="none"
+          stroke="black"
+          stroke-width="12"
+        />
+      </defs>
+    </svg>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let menuOpen = false;
+        $("#mobile-nav-menu-button").on("click", function () {
+          menuOpen = !menuOpen;
+          if (menuOpen) {
+            $("#mobile-nav-menu").addClass("open");
+            $("body").addClass("mobile-nav-menu-open");
+          } else {
+            $("#mobile-nav-menu").removeClass("open");
+            $("body").removeClass("mobile-nav-menu-open");
+          }
+        });
+        // $("#mobile-nav-menu-button").click();
+
+        let mobileProductDropdownOpen = false;
+        $("#mobile-nav-menu-product-button").on("click", function () {
+          $(".mobile-nav-menu-dropdown").each((i, el) => {
+            $(el).removeClass("open");
+          });
+          mobileProductDropdownOpen = !mobileProductDropdownOpen;
+          mobileProductBonjoroOpen = false;
+          if (mobileProductDropdownOpen) {
+            $("#mobile-nav-menu-product-dropdown").addClass("open");
+          } else {
+            $("#mobile-nav-menu-product-dropdown").removeClass("open");
+          }
+        });
+
+        let mobileProductBonjoroOpen = false;
+        $("#mobile-nav-menu-bonjoro-for-button").on("click", function () {
+          $(".mobile-nav-menu-dropdown").each((i, el) => {
+            $(el).removeClass("open");
+          });
+          mobileProductBonjoroOpen = !mobileProductBonjoroOpen;
+          mobileProductDropdownOpen = false;
+          if (mobileProductBonjoroOpen) {
+            $("#mobile-nav-menu-bonjoro-for-dropdown").addClass("open");
+          } else {
+            $("#mobile-nav-menu-bonjoro-for-dropdown").removeClass("open");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+.home {
+  color: #403f3f;
+  font-size: 18px;
+
+  .mt-n1 {
+    margin-top: -1px;
+  }
+  .mb-n1 {
+    margin-bottom: -1px;
+  }
+
+  .h1 {
+    font-size: 50px;
+    color: #323232;
+  }
+  
+  .h2 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+  
+  p {
+    letter-spacing: 0.1px;
+    line-height: 1.875;
+  }
+  
+  mark {
+    background-color: $site-primary;
+    color: black;
+    padding: 0px 1rem;
+  }
+
+  .testimonial {
+    font-size: 14px;
+    p {
+      margin: 0px;
+      line-height: 1.79;
+
+      &.author {
+        color: #a6a6a6;
+      }
+    }
+  }
+
+  section {
+    .icon-image {
+      height: 40px;
+    }
+  }
+
+  section.section-hero {
+    padding-bottom: 60px;
+    h1 {
+      font-size: 30px;
+      @include break-sm {
+        font-size: 50px;
+      }
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  section.section-image-1 {
+    & > div {
+      position: relative;
+      .panel {
+        position: absolute;
+        bottom: 1.5px;
+        left: 1.5px;
+        background-color: white;
+      }
+    }
+  }
+
+  section.customer-logos-section {
+    .logo {
+      height: 32px;
+    }
+  }
+
+
+  section.testimonial-section {
+    .author {
+      height: 38px;
+      width: 38px;
+    }
+    cite {
+      line-height: normal;
+    }
+  }
+
+  section.teams-section {
+    h2 {
+      font-size: 50px;
+      color: #323232;
+    }
+
+    a.team-card {
+      display: block;
+      color: inherit;
+      box-shadow:rgba(0, 0, 0, 0.2) 0px 3px 15px 0px;
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+      &:hover {
+        box-shadow:rgba(0, 0, 0, 0.4) 0px 3px 12px 0px;
+        text-decoration: none;
+      }
+
+      .image {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        background-position: 50% 50%;
+        background-size: cover;
+        .spacer {
+          width: 100%;
+          padding-top: 61%;
+        }
+      }
+
+      h3 {
+        font-size: 36px;
+      }
+    }
+  }
+}

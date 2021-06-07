@@ -1,0 +1,172 @@
+@import "./site_mixins";
+
+.auth-login,
+.auth-register {
+  min-height: 100vh;
+  display: flex;
+  padding: 0px !important;
+  font-size: 14px;
+  color: #444444;
+
+  .btn {
+    font-size: inherit;
+    &.btn-lg {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-size: 16px;
+    }
+  }
+  
+
+  h2, .h2 {
+    font-size: 18px;
+  }
+
+  .text-muted {
+    color: #777777;
+  }
+
+  label, input {
+    color: #7D7C7C;
+  }
+  input.form-control {
+    font-size: 13px;
+    padding: 6px 12px !important;
+    height: 40px;
+    color: $site-secondary;
+
+    &[type="password"] {
+      color: #777;
+    }
+  }
+
+  .button-divider {
+    hr {
+      border-width: 1px;
+    }
+    p {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 0px 0.25rem;
+      font-size: 16px;
+    }
+  }
+  section.form-section {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    @include break-lg {
+      min-width: 450px;
+      flex: 0 0 35%;
+    }
+
+    .content {
+      max-width: 395px;
+      @include break-lg {
+        max-width: 100%;
+      }
+      @include break-xl {
+        max-width: 395px;
+      }
+    }
+
+    .pw-strength-indicator {
+      height: 3px;
+      background-color: #ddd;
+      position: relative;
+
+      .fill {
+        position: absolute;
+        left: 0%;
+        height: 100%;
+        width: 0%;
+
+        &.fill-1 {
+          width: 25%;
+          background-color: red;
+        }
+        &.fill-2 {
+          width: 50%;
+          background-color: yellow;
+        }
+        &.fill-3 {
+          width: 75%;
+          background-color: lime;
+        }
+        &.fill-4 {
+          width: 100%;
+          background-color: green;
+        }
+      }
+
+      .marker {
+        position: absolute;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 4px;
+        background-color: white;
+
+        &.marker--25 {
+          left: 25%;
+        }
+        &.marker--50 {
+          left: 50%;
+        }
+        &.marker--75 {
+          left: 75%;
+        }
+      }
+    }
+  }
+
+  section.visual-section {
+    display: none;
+    position: relative;
+
+    @include break-lg {
+      display: block;
+      flex: 1 1 auto;
+      background-size: cover;
+      background-position: 50% 0%;
+    }
+
+    .panel {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      max-width: 330px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: rgba(255, 255, 255, 0.9);
+
+      h2 {
+        font-size: 23px;
+      }
+
+      a {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.auth-register {
+  h1 {
+    font-size: 26px;
+  }
+
+  .password-info {
+    font-size: 12px;
+  }
+
+
+
+  :not(.cookies-banner) {
+    .btn {
+      font-size: 16px;
+    }
+  }
+}

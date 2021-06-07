@@ -1,0 +1,627 @@
+/*
+Theme Name: wp-cp-1
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: AlexWu
+Author URI: https://alex0n0.github.io/portfolio/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors. (required)
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.3 (required)
+Requires at least: 5.0 (required)
+Tested up to: 5.4 (required)
+Requires PHP: 7.0 (required)
+License: GNU General Public License v2 or later (required)
+License URI: http://www.gnu.org/licenses/gpl-2.0.html (required)
+Text Domain: wp-cp-1
+*/
+
+@import "./assets/css/site_mixins";
+
+.logo {
+  height: 34px;
+}
+
+body:not(.help-docs) {
+  padding-top: 84px;
+  &.mobile-nav-menu-open {
+    padding-top: 620px;
+
+    @include break-lg {
+      padding-top: 84px;
+    }
+  }
+}
+
+header#header:not(.help-docs) {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  background-color: white;
+  color: #403f3f;
+
+  .logo {
+    height: 32px;
+  }
+
+  .btn-register {
+    font-size: 20px;
+    padding: 8px 20px;
+  }
+
+  .navlink {
+    font-weight: 700;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: $site-secondary;
+      cursor: pointer;
+    }
+
+    font-size: 18px;
+    @include break-lg {
+      font-size: 16px;
+    }
+  }
+  .dropdown-item {
+    &:hover {
+      background-color: #f2f2f2 !important;
+    }
+    .navlink {
+      font-weight: 400;
+      color: #403f3f;
+    }
+  }
+  .cta {
+    font-size: 20px;
+  }
+
+  #mobile-nav-menu {
+    display: none;
+    &.open {
+      display: block;
+      @include break-lg {
+        display: none;
+      }
+    }
+
+    .navlink {
+      background-color: #f2f2f2;
+      border-radius: 6px;
+      padding: 1rem;
+
+      display: block;
+    }
+
+    .mobile-nav-menu-dropdown {
+      display: none;
+      &.open {
+        display: block;
+      }
+      li {
+        background-color: #f2f2f2;
+      }
+
+      .navlink {
+        font-weight: 400;
+        color: #403f3f;
+        font-size: 16px;
+
+        &:hover {
+          color: $site-secondary;
+        }
+      }
+    }
+  }
+}
+
+footer#footer:not(.help-docs) {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  font-size: 16px;
+
+  @include break-lg {
+    padding-bottom: 192px;
+  }
+
+  color: #403f3f;
+
+  .footer-grid {
+    display: grid;
+    grid-template-areas:
+      "product-links company-links"
+      "learn-links support-links"
+      "general-links general-links";
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+    grid-row-gap: 2.4rem;
+
+    @include break-md {
+      grid-template-areas:
+        "general-links general-links . ."
+        "product-links company-links learn-links support-links";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @include break-lg {
+      grid-template-areas: "general-links general-links product-links company-links learn-links support-links";
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .general-links {
+      grid-area: general-links;
+      text-align: center;
+      font-size: 16px;
+      @include break-md {
+        text-align: left;
+        font-size: 18px;
+      }
+    }
+    .product-links {
+      grid-area: product-links;
+    }
+    .company-links {
+      grid-area: company-links;
+    }
+    .learn-links {
+      grid-area: learn-links;
+    }
+    .support-links {
+      grid-area: support-links;
+    }
+
+    a {
+      color: inherit;
+      font-weight: 700;
+      &:hover {
+        text-decoration: none;
+        color: $site-secondary;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 800;
+    }
+  }
+
+  .logo {
+    height: 37px;
+  }
+
+  .social-links {
+    a {
+      color: black !important;
+      &:hover {
+        text-decoration: none;
+      }
+
+      i {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+.i-0 {
+  font-style: normal;
+}
+.i {
+  font-style: italic;
+}
+.u-0 {
+  font-style: normal;
+}
+.u {
+  text-decoration: underline;
+}
+
+.b-1 {
+  font-weight: 100;
+}
+
+.b-2 {
+  font-weight: 200;
+}
+
+.b-3 {
+  font-weight: 300;
+}
+
+.b-4 {
+  font-weight: 400;
+}
+
+.b-5 {
+  font-weight: 500;
+}
+
+.b-6 {
+  font-weight: 600;
+}
+
+.b-7 {
+  font-weight: 700;
+}
+
+.b-8 {
+  font-weight: 800;
+}
+
+.b-9 {
+  font-weight: 900;
+}
+
+.b-10 {
+  font-weight: 1000;
+}
+
+.text-black.text-light {
+  color: #403f3f !important;
+}
+
+a {
+  &.link-1 {
+    color: #27b3c1;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.link-2 {
+    color: #999;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &.link-3 {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px dotted black;
+  }
+}
+
+.btn.btn-lg {
+  font-size: 20px;
+  padding: 0.75rem 1rem;
+}
+
+.fab {
+  &.fab-chat {
+    z-index: 10000;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    border-radius: 9999px;
+    background-color: #208059;
+    color: white;
+  }
+}
+
+.chat-box {
+  position: fixed;
+  z-index: 10000;
+  right: 20px;
+  bottom: 80px;
+  width: 100%;
+  max-width: 376px;
+  min-width: 376px;
+  height: calc(100vh - 120px);
+  max-height: 704px;
+  min-height: 250px;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 0.5rem;
+
+  padding: 1rem;
+  opacity: 0;
+  transition: all 0.3s;
+  font-size: 16px;
+
+  &.open {
+    opacity: 1;
+    bottom: 100px;
+
+    .background {
+      height: 205px;
+    }
+
+    .content {
+      .box {
+        opacity: 1;
+      }
+    }
+  }
+
+  .background {
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 185px;
+    background: linear-gradient(-30deg, rgb(19, 93, 155), rgb(49, 144, 199));
+    transition: 0.3s all;
+    transition-delay: 0.2s;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    
+    .header {
+      color: rgba(255, 255, 255, 0.6);
+      h2 {
+        color: white;
+        font-size: 32px;
+      }
+      
+      p {
+        line-height: 1.6rem;
+      }
+    }
+    .box {
+      opacity: 0;
+      transition: 0.25s all;
+      transition-delay: 1s;
+    }
+  }
+}
+
+
+section.email-cta-section {
+  h2 {
+    font-size: 32px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+.cookies-banner {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 14px;
+  button {
+    font-size: inherit;
+  }
+}
+
+.mailing-list-panel {
+  position: fixed;
+  z-index: 20000;
+  bottom: 0px;
+  right: 0px;
+  max-width: 600px;
+  width: 40%;
+  min-width: 400px;
+
+  & > div {
+    padding: 15px 25px;
+  }
+  .close-button {
+    height: 29px;
+    width: 29px;
+    background-color: rgb(139, 139, 139);
+    color: white;
+  }
+
+  font-size: 20px;
+
+  .h1 {
+    font-size: 27px !important;
+  }
+
+  input, button {
+    border-radius: 16px !important;
+  }
+}
+
+.social-media-panel {
+  position: fixed;
+  z-index: 20000;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  max-width: 50px;
+  text-align: center;
+  background-color: white;
+
+  .small {
+    font-size: 10px !important;
+  }
+
+  button.btn {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    border: none;
+
+    &.fb {
+      background-color: #3b5998;
+    }
+    &.lk {
+      background-color: #007bb6;
+    }
+    &.tw {
+      background-color: #00aced;
+    }
+  }
+}
+
+.bg-primary-light {
+  background-color: $site-primary-bg-light;
+}
+
+.pt-32 {
+  padding-top: 32px;
+}
+.pt-48 {
+  padding-top: 48px;
+}
+.pt-72 {
+  padding-top: 72px;
+}
+.pt-80 {
+  padding-top: 80px;
+}
+.pt-96 {
+  padding-top: 96px;
+}
+.pt-144 {
+  padding-top: 144px;
+}
+.pb-48 {
+  padding-bottom: 48px;
+}
+.pb-80 {
+  padding-bottom: 80px;
+}
+.pb-96 {
+  padding-bottom: 96px;
+}
+.pb-144 {
+  padding-bottom: 144px;
+}
+.pb-240 {
+  padding-bottom: 240px;
+}
+.mt-50 {
+  margin-top: 50px;
+}
+.mt-60 {
+  margin-top: 60px;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-96 {
+  margin-top: 144px;
+}
+.mt-144 {
+  margin-top: 144px;
+}
+.mt-160 {
+  margin-top: 160px;
+}
+.mt-200 {
+  margin-top: 200px;
+}
+.mb-32 {
+  margin-bottom: 32px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-48 {
+  margin-bottom: 48px;
+}
+.mb-60 {
+  margin-bottom: 60px;
+}
+.mb-80 {
+  margin-bottom: 80px;
+}
+.mb-96 {
+  margin-bottom: 96px;
+}
+.mb-144 {
+  margin-bottom: 144px;
+}
+
+.font-26 {
+  font-size: 26px;
+  line-height: 26px;
+}
+.font-36 {
+  font-size: 36px;
+  line-height: 54px;
+}
+.font-50 {
+  font-size: 50px;
+  line-height: 75px;
+}
+
+#start-section-tlbr-primary-light {
+  fill: $site-primary-bg-light;
+}
+#start-section-trbl-primary-light {
+  fill: $site-primary-bg-light;
+}
+#end-section-tlbr-primary-light {
+  fill: $site-primary-bg-light;
+}
+#end-section-tlbr-secondary-light {
+  fill: $site-secondary-light;
+}
+#start-section-tlbr-primary {
+  fill: $site-primary;
+}
+#end-section-trbl-primary {
+  fill: $site-primary;
+}
+#end-section-tlbr-primary {
+  fill: $site-primary;
+}
+#start-section-trbl-primary {
+  fill: $site-primary;
+}
+#end-section-trbl-primary-light {
+  fill: $site-primary-bg-light;
+}
+#start-section-tlbr-secondary {
+  fill: $site-secondary;
+}
+#start-section-trbl-secondary {
+  fill: $site-secondary;
+}
+#end-section-tlbr-secondary {
+  fill: $site-secondary;
+}
+#end-section-trbl-secondary {
+  fill: $site-secondary;
+}
+
+@import "./assets/css/404";
+@import "./assets/css/about";
+@import "./assets/css/auth";
+@import "./assets/css/blog-page";
+@import "./assets/css/blog";
+@import "./assets/css/features";
+@import "./assets/css/help-docs";
+@import "./assets/css/home";
+@import "./assets/css/integrations";
+@import "./assets/css/pricing";
+@import "./assets/css/screen-recorder";
+@import "./assets/css/terms-and-privacy";
+@import "./assets/css/videofunnels";

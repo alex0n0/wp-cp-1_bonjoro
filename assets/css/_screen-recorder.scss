@@ -1,0 +1,81 @@
+.screen-recorder {
+
+  .b-8 {
+    font-weight: 700;
+    @include break-sm {
+      font-weight: 800;
+    }
+  }
+
+  @include break-sm {
+    font-size: 18px;
+  }
+
+  h1, .h1 {
+    font-size: 24px;
+    @include break-sm {
+      font-size: 50px;
+    }
+  }
+  
+  h2, .h2 {
+    font-size: 36px;
+  }
+
+  h3, .h3 {
+    font-size: 20px;
+    @include break-sm {
+      font-size: 36px;
+    }
+  }
+
+  section.hero-section {
+    padding-top: 1rem;
+    @include break-sm {
+      padding-top: 80px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+  }
+
+  section.feature-section {
+    padding-bottom: 340px;
+    h3 {
+      font-size: 20px;
+      button {
+        font-size: inherit;
+      }
+    }
+
+    .feature-accordion {
+      position: relative;
+      .content {
+        position: relative;
+        z-index:1;
+        max-width: 350px;
+      }
+      img.feature-image {
+        position: relative;
+        z-index:0;
+        height: auto;        
+        width: 100%;
+        max-width: 500px;
+        @include break-md {
+          top: 0px;
+          right: 0px;
+          position: absolute;
+          width: 60%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  section.others-section {
+    img {
+      max-width: 350px;
+    }
+  }
+}

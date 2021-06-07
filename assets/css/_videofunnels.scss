@@ -1,0 +1,132 @@
+@import "./site_mixins";
+
+.videofunnels {
+
+  .hero-section {
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    @include break-md {
+      padding-top: 120px;
+      padding-bottom: 96px;
+      background-color: $site-secondary-light;
+      min-height: 600px;
+    }
+
+    .text-muted {
+      color: #666666;
+    }
+
+    h1 {
+      font-size: 30px;
+      @include break-md {
+        font-size: 50px;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    p {
+      line-height: 30px;
+    }
+
+    .content {
+      max-width: 500px;
+    }
+  }
+
+  .funnels-section {
+    .grid {
+      display: grid;
+      grid-template-areas:
+        "categories"
+        "popular";
+
+      @include break-lg {
+        grid-template-areas:
+          "categories searchbar"
+          "categories popular"
+          "categories all";
+        grid-template-columns: 240px 1fr;
+      }
+
+      .categories {
+        grid-area: categories;
+        font-size: 14px;
+
+        a {
+          position: relative;
+          display: block;
+          color: $site-text-color;
+          padding: 0.5rem 1rem;
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &.active {
+            color: $site-secondary;
+            &::before {
+              content: "";
+              position: absolute;
+              left: -1.25rem;
+              top: 0px;
+              width: 4px;
+              height: 100%;
+              background-color: $site-secondary;
+              opacity: 0.2;
+            }
+          }
+        }
+      }
+
+      .funnels {
+        grid-area: popular;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        a.integration-card {
+          color: $site-text-color;
+          border-radius: 0.75rem;
+          max-width: 270px;
+          @include break-sm {
+            max-width: 100%;
+          }
+
+          &:hover {
+            text-decoration: none;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 15px 0px;
+            // box-shadow:rgba(0, 0, 0, 0.4) 0px 3px 12px 0px;
+          }
+          .header {
+            position: relative;
+            width: 100%;
+            border-top-left-radius: 0.75rem;
+            border-top-right-radius: 0.75rem;
+            background-position: center;
+            background-size: cover;
+            .spacer {
+              padding-top: 62.9%;
+            }
+          }
+
+          .body {
+            background-color: rgb(253, 251, 251);
+            padding: 12px;
+            font-size: 14px;
+
+            h3 {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

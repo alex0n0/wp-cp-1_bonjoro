@@ -1,0 +1,116 @@
+.pricing {
+  font-size: 16px;
+
+  .mt-n1 {
+    margin-top: -0.1px;
+  }
+  .mb-n1 {
+    margin-bottom: -0.1px;
+  }
+
+  section.hero-section {
+    position: relative;
+    .h1 {
+      font-size: 40px;
+    }
+
+    .h2 {
+      font-size: 24px;
+    }
+
+    .content {
+      z-index: 2;
+      position: relative;
+      .pricing-card {
+        h2 {
+          font-size: 30px;
+        }
+        .price {
+          font-size: 40px;
+        }
+        
+        button {
+          font-size: 16px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+          &:hover {
+            background-color: $site-primary;
+            border-color: $site-primary;
+            color: black;
+          }
+        };
+
+        .small {
+          font-size: 14px;
+        }
+
+        .features-list {
+          font-size: 18px;
+          color: #6D7278;
+
+          .text-muted {
+            color: #777;
+          }
+        }
+
+        .text-muted {
+          color: #a4a4a4 !important;
+        }
+      }
+      .panel {
+        @include break-md {
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+          width: 100%;
+          h2 {
+            font-size: 28px;
+            letter-spacing: 1px;
+          }
+          p {
+            font-size: 18px;
+          }
+          button {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .background {
+      z-index: 1;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      .bg-secondary {
+        height: 600px;
+      }
+    }
+  }
+
+
+  section.section-features {
+    h2.section-features-title {
+      font-size: 14px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background-color: black;
+        width: 75px;
+        top: calc(100% + 0.5rem);
+        left: 0px;
+      }
+    }
+
+    .features-card {
+      font-size: 14px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+}

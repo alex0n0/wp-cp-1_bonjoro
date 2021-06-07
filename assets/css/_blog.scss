@@ -1,0 +1,98 @@
+.blog {
+  section.hero-section {
+    padding-top: 20px;
+    
+    .small {
+      font-size: 13px;
+    }
+
+    .category-links {
+      font-size: 14px;
+      text-transform: uppercase;
+      
+      a {
+        font-weight: 700;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        color: #999;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .subscribe-group {
+      width: 100%;
+      @include break-md {
+        width: 400px;
+      }
+
+      input {
+        color: $site-secondary;
+        &:focus {
+          outline: 0;
+        }
+
+        &::placeholder {
+          color: rgba($site-secondary, .5);
+        }
+      }
+
+      button {
+        font-size: 14px;
+        color: $site-secondary;
+        border-radius: 0 0 0 0;
+        &:hover {
+          background-color: $site-secondary;
+          color: white;
+        }
+      }
+    }
+  }
+
+  section.article-section {
+    .blog-article {
+      font-size: 19.6px;
+      color: #444444;
+
+      a {
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid #CCC;
+        }
+        color: inherit;
+        border-bottom: 1px solid transparent;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+      
+      .date {
+        font-size: 18px;
+      }
+    
+      .image {
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: auto;
+        }
+        .spacer {
+          width: 100%;
+          padding-top: 46%;
+        }
+      }
+    }
+
+    .btn-more {
+      padding: 6px 16px;
+      font-size: 14px;
+    }
+  }
+}

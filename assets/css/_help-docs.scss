@@ -1,0 +1,163 @@
+.help-docs {
+  color: #565867;
+
+  h1, .h1 {
+    font-size: 28px;
+  }
+
+  h2, .h2 {
+    font-size: 18px;
+  }
+
+  .container-lg {
+    max-width: 920px;
+  }
+
+  header#header.help-docs {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+
+    .searchbar {
+      position: relative;
+
+      .search-button {
+        position: absolute;
+        height: 100%;
+        width: 50px;
+        top: 0px;
+        left: 0px;
+      }
+
+      input {
+        background-color: rgba(255, 255, 255, 0.3);
+        border: none;
+        width: 100%;
+        padding: 20px 30px 20px 50px;
+        border-radius: 0.4rem;
+        transition: 0.3s background-color;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+          font-weight: 600;
+          transition: 0.3s all;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        &:focus {
+          background-color: rgba(255, 255, 255, 1);
+
+          &::placeholder {
+            color: #b3b3b3;
+          }
+        }
+        &:focus {
+          background-color: rgba(255, 255, 255, 1);
+
+          &::placeholder {
+            color: #b3b3b3;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    background-color: #f3f5f7;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    a.question-card {
+      display: block;
+      margin-bottom: 1rem;
+      color: inherit;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      .question-card__inner {
+        background-color: white;
+        padding: 30px 30px;
+        h2 {
+          color: $site-primary-dark;
+        }
+
+        .icon {
+          margin-right: 30px;
+          margin-bottom: 1rem;
+          display: flex;
+
+          @include break-sm {
+            justify-content: center;
+            width: 50px;
+            padding-top: 1rem;
+          }
+          @include break-lg {
+            width: 120px;
+            justify-content: center;
+            align-items: center;
+          }
+          img {
+            height: auto;
+            width: 30px;
+            transition: 0.3s all;
+            @include break-lg {
+              width: 48px;
+            }
+          }
+        }
+
+        .author {
+          font-size: 13px;
+          color: #8F919D;
+          position:relative;
+          img {
+            height: 34px;
+            width: 34px;
+            flex: 0 0 auto;
+            margin-top: 2px;
+            border: 2px solid white;
+            border-radius: 99999px;
+            &:not(:first-child) {
+              margin-left: -10px;
+            }
+            position: relative;
+            &:nth-child(1) {
+              z-index: 10;
+            }
+            &:nth-child(2) {
+              z-index: 9;
+            }
+            &:nth-child(3) {
+              z-index: 8;
+            }
+            &:nth-child(4) {
+              z-index: 7;
+            }
+          }
+          .text-unmuted {
+            color: #4F5E6B;
+          }
+        }
+      }
+    }
+  }
+
+  footer#footer.help-docs {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: white;
+  }
+}
